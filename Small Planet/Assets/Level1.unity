@@ -127,7 +127,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &54190451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,11 +136,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 54190445}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35d0e68ffd174d344a7fdef1c15bcf06, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ecce2880e048d746984619df3a6de86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRigidbody: {fileID: 54190450}
-  force: 10
+  rb: {fileID: 54190450}
+  target: {fileID: 1613982505}
 --- !u!1 &554117193
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,6 +278,8 @@ GameObject:
   - component: {fileID: 1613982503}
   - component: {fileID: 1613982502}
   - component: {fileID: 1613982501}
+  - component: {fileID: 1613982507}
+  - component: {fileID: 1613982506}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -296,10 +298,10 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.5
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 46
-  m_CollisionDetection: 0
+  m_Constraints: 14
+  m_CollisionDetection: 1
 --- !u!23 &1613982502
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -359,11 +361,37 @@ Transform:
   m_GameObject: {fileID: 1613982500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -13.4, y: 0, z: 0}
-  m_LocalScale: {x: 30, y: 1, z: 30}
+  m_LocalScale: {x: 30, y: 30, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1613982506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1613982500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9afbfd0b12c32d14389463216bb2dd73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smooth: 10
+  tiltAngle: 90
+--- !u!114 &1613982507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1613982500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d0e68ffd174d344a7fdef1c15bcf06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRigidbody: {fileID: 0}
+  force: 0
 --- !u!1 &2024521829
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,8 +474,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2024521829}
-  m_LocalRotation: {x: -0.21956182, y: 0.28761002, z: -0.06791837, w: -0.92976356}
-  m_LocalPosition: {x: -0.13512039, y: 6.937314, z: -17.457151}
+  m_LocalRotation: {x: -0.41949207, y: 0.006808251, z: -0.0031462982, w: -0.9077281}
+  m_LocalPosition: {x: -12.70765, y: 33.518375, z: -27.701202}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
